@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walmart Tijarat - Black & Red Theme</title>
+    <title>Lund Trust - Black & Red Theme</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #0b0b0b;
+            background-color: #000000;
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -55,7 +55,7 @@
         }
 
         .icon-btn {
-            background: rgba(255, 255, 255, 0.05);
+            background: #141414;
             border: 1px solid rgba(255, 255, 255, 0.1);
             width: 40px;
             height: 40px;
@@ -80,18 +80,18 @@
 
         .welcome-section p {
             font-size: 14px;
-            color: #888888;
+            color: #aaaaaa;
         }
 
         /* Total Balance Card */
         .balance-card {
-            background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            background: #120505;
+            border: 1px solid rgba(255, 0, 0, 0.25);
             border-radius: 20px;
             padding: 20px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
         }
 
         .balance-title {
@@ -107,7 +107,7 @@
         }
 
         .profit-badge {
-            background: rgba(255, 0, 0, 0.15);
+            background: #1f0808;
             border: 1px solid rgba(255, 0, 0, 0.3);
             padding: 4px 10px;
             border-radius: 20px;
@@ -124,8 +124,8 @@
 
         .action-btn {
             flex: 1;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #1c1c1c;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 12px;
             border-radius: 14px;
             color: #ffffff;
@@ -135,6 +135,11 @@
             justify-content: center;
             gap: 6px;
             cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .action-btn:active {
+            opacity: 0.7;
         }
 
         .action-btn.primary {
@@ -157,7 +162,7 @@
 
         .section-header span {
             font-size: 12px;
-            color: #777777;
+            color: #aaaaaa;
         }
 
         /* Quick Actions Grid */
@@ -168,8 +173,8 @@
         }
 
         .grid-item {
-            background: #141414;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: #121212;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 16px 10px;
             border-radius: 16px;
             display: flex;
@@ -178,28 +183,34 @@
             text-align: center;
             gap: 10px;
             cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .grid-item:active {
+            background: #1f1f1f;
         }
 
         .grid-item div {
             font-size: 12px;
-            color: #cccccc;
+            color: #dddddd;
         }
 
         .icon-circle {
             width: 40px;
             height: 40px;
-            background: rgba(255, 0, 0, 0.1);
+            background: #1c1c1c;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ff1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         /* Invite Banner */
         .invite-banner {
-            background: linear-gradient(135deg, #141414 0%, #1f0505 100%);
-            border: 1px solid rgba(255, 0, 0, 0.2);
+            background: #120505;
+            border: 1px solid rgba(255, 0, 0, 0.25);
             border-radius: 20px;
             padding: 20px;
         }
@@ -207,21 +218,22 @@
         .invite-banner h3 {
             font-size: 16px;
             margin-bottom: 4px;
+            color: #ffffff;
         }
 
         .invite-banner p {
             font-size: 12px;
-            color: #888888;
+            color: #aaaaaa;
             margin-bottom: 12px;
         }
 
         .link-box {
             background: #000000;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 10px;
             border-radius: 10px;
             font-size: 11px;
-            color: #aaaaaa;
+            color: #cccccc;
             margin-bottom: 12px;
             word-break: break-all;
         }
@@ -239,6 +251,11 @@
             align-items: center;
             gap: 6px;
             margin-left: auto;
+            transition: opacity 0.2s;
+        }
+
+        .copy-btn:active {
+            opacity: 0.7;
         }
 
         /* Account Overview */
@@ -249,15 +266,15 @@
         }
 
         .overview-card {
-            background: #141414;
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: #121212;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             padding: 14px 10px;
             border-radius: 16px;
         }
 
         .overview-card .label {
             font-size: 11px;
-            color: #888888;
+            color: #aaaaaa;
             margin-bottom: 6px;
         }
 
@@ -267,10 +284,10 @@
             color: #ff4d4d;
         }
 
-        /* Scratch & Win / Lucky Spinner Cards */
+        /* Scratch & Win / Game Cards */
         .game-card {
-            background: linear-gradient(135deg, #1f0505 0%, #141414 100%);
-            border: 1px solid rgba(255, 0, 0, 0.3);
+            background: #120505;
+            border: 1px solid rgba(255, 0, 0, 0.25);
             border-radius: 20px;
             padding: 20px;
             display: flex;
@@ -281,11 +298,12 @@
         .game-info h3 {
             font-size: 18px;
             margin-bottom: 4px;
+            color: #ffffff;
         }
 
         .game-info p {
             font-size: 12px;
-            color: #888888;
+            color: #aaaaaa;
             margin-bottom: 12px;
         }
 
@@ -298,12 +316,17 @@
             font-weight: bold;
             font-size: 13px;
             cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .play-btn:active {
+            opacity: 0.7;
         }
 
         /* Active Plan Card */
         .plan-card {
-            background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%);
-            border: 1px solid rgba(255, 0, 0, 0.4);
+            background: #120505;
+            border: 1px solid rgba(255, 0, 0, 0.3);
             border-radius: 20px;
             padding: 20px;
         }
@@ -324,20 +347,22 @@
         .plan-icon {
             width: 36px;
             height: 36px;
-            background: rgba(255, 0, 0, 0.2);
+            background: #1c1c1c;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ff1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .plan-name h4 {
             font-size: 16px;
+            color: #ffffff;
         }
 
         .plan-status {
-            background: rgba(255, 0, 0, 0.2);
+            background: #1f0808;
             border: 1px solid #ff1a1a;
             color: #ff4d4d;
             padding: 4px 12px;
@@ -354,7 +379,7 @@
 
         .plan-stat .stat-label {
             font-size: 11px;
-            color: #888888;
+            color: #aaaaaa;
         }
 
         .plan-stat .stat-val {
@@ -370,18 +395,20 @@
             border-radius: 3px;
             overflow: hidden;
             margin-bottom: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .progress-bar-fill {
             background: #ff1a1a;
-            width: 22%;
+            width: 0%;
             height: 100%;
+            transition: width 0.4s ease;
         }
 
         .progress-text {
             text-align: right;
             font-size: 11px;
-            color: #888888;
+            color: #aaaaaa;
         }
 
         /* Bottom Navigation */
@@ -392,7 +419,7 @@
             transform: translateX(-50%);
             width: 100%;
             max-width: 480px;
-            background: #111111;
+            background: #0d0d0d;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-around;
@@ -405,13 +432,14 @@
             flex-direction: column;
             align-items: center;
             gap: 4px;
-            color: #777777;
+            color: #888888;
             font-size: 11px;
             text-decoration: none;
             cursor: pointer;
+            transition: color 0.2s;
         }
 
-        .nav-item.active {
+        .nav-item.active, .nav-item:hover {
             color: #ff1a1a;
         }
     </style>
@@ -422,29 +450,29 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="logo-area">
-                🛒 Walmart <span>Tijarat</span>
+                🛡️ Lund <span>Trust</span>
             </div>
             <div class="top-icons">
-                <div class="icon-btn">🔔</div>
-                <div class="icon-btn">⋮</div>
-                <div class="icon-btn">👤</div>
+                <div class="icon-btn" onclick="handleAlert('Notifications')">🔔</div>
+                <div class="icon-btn" onclick="handleAlert('Menu')">⋮</div>
+                <div class="icon-btn" onclick="handleNavigation('Profile')">👤</div>
             </div>
         </div>
 
         <!-- Welcome Section -->
         <div class="welcome-section">
-            <h1>Welcome Back, <span>umer.jump</span></h1>
+            <h1>Welcome Back, <span id="username-display">umer.jump</span></h1>
             <p>Keep investing, keep growing!</p>
         </div>
 
         <!-- Total Balance Card -->
         <div class="balance-card">
             <div class="balance-title">Total Balance</div>
-            <div class="balance-amount">Rs. 36</div>
-            <div class="profit-badge">📊 +140 Rs total profit</div>
+            <div class="balance-amount" id="total-balance">Rs. 0</div>
+            <div class="profit-badge" id="profit-badge">📊 +0 Rs total profit</div>
             <div class="balance-actions">
-                <div class="action-btn primary">➕ Deposit</div>
-                <div class="action-btn">➖ Withdraw</div>
+                <div class="action-btn primary" onclick="handleDeposit()">➕ Deposit</div>
+                <div class="action-btn" onclick="handleWithdraw()">➖ Withdraw</div>
             </div>
         </div>
 
@@ -454,27 +482,27 @@
             <span>Manage Your Investments</span>
         </div>
         <div class="grid-3">
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('Buy Plan')">
                 <div class="icon-circle">🛒</div>
                 <div>Buy Plan</div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('Active Plans')">
                 <div class="icon-circle">📊</div>
                 <div>Active Plans</div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('Deposit History')">
                 <div class="icon-circle">📋</div>
                 <div>Deposit History</div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('Withdraw History')">
                 <div class="icon-circle">💳</div>
                 <div>Withdraw History</div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('My Team')">
                 <div class="icon-circle">👥</div>
                 <div>My Team</div>
             </div>
-            <div class="grid-item">
+            <div class="grid-item" onclick="handleQuickAction('Referral Income')">
                 <div class="icon-circle">🎁</div>
                 <div>Referral Income</div>
             </div>
@@ -484,8 +512,8 @@
         <div class="invite-banner">
             <h3>Invite Friends & Earn Rewards</h3>
             <p>Grow Together, Earn Together</p>
-            <div class="link-box">https://walmart-tijarat.com/signup?ref=umer.jump</div>
-            <button class="copy-btn">📋 Copy Link</button>
+            <div class="link-box" id="ref-link">https://lund-trust.com/signup?ref=umer.jump</div>
+            <button class="copy-btn" onclick="copyReferralLink()">📋 Copy Link</button>
         </div>
 
         <!-- Account Overview -->
@@ -496,15 +524,15 @@
         <div class="overview-grid">
             <div class="overview-card">
                 <div class="label">Total Deposits</div>
-                <div class="value">640 Rs</div>
+                <div class="value" id="overview-deposits">0 Rs</div>
             </div>
             <div class="overview-card">
                 <div class="label">Total Withdraw</div>
-                <div class="value">150 Rs</div>
+                <div class="value" id="overview-withdraw">0 Rs</div>
             </div>
             <div class="overview-card">
                 <div class="label">Pending Deposits</div>
-                <div class="value">0 Rs</div>
+                <div class="value" id="overview-pending">0 Rs</div>
             </div>
         </div>
 
@@ -513,7 +541,7 @@
             <div class="game-info">
                 <h3>Scratch & Win</h3>
                 <p>1 Chance Daily</p>
-                <button class="play-btn">Play Now</button>
+                <button class="play-btn" onclick="playGame('Scratch & Win')">Play Now</button>
             </div>
             <div style="font-size: 32px;">🎁</div>
         </div>
@@ -528,52 +556,102 @@
                 <div class="plan-title-area">
                     <div class="plan-icon">📈</div>
                     <div class="plan-name">
-                        <h4>Package 1</h4>
+                        <h4>Package 1 (New)</h4>
                     </div>
                 </div>
-                <div class="plan-status">Active</div>
+                <div class="plan-status" id="plan-status-badge">Inactive</div>
             </div>
             <div class="plan-details">
                 <div class="plan-stat">
                     <div class="stat-label">INVESTMENT</div>
-                    <div class="stat-val">320 Rs</div>
+                    <div class="stat-val" id="plan-investment">0 Rs</div>
                 </div>
                 <div class="plan-stat">
                     <div class="stat-label">DAILY PROFIT</div>
-                    <div class="stat-val">70 Rs</div>
+                    <div class="stat-val" id="plan-profit">0 Rs</div>
                 </div>
             </div>
             <div class="progress-bar-bg">
-                <div class="progress-bar-fill"></div>
+                <div class="progress-bar-fill" id="progress-fill"></div>
             </div>
-            <div class="progress-text">22%</div>
+            <div class="progress-text" id="progress-text">0%</div>
         </div>
     </div>
 
     <!-- Bottom Navigation -->
     <div class="bottom-nav">
-        <a class="nav-item active">
+        <a class="nav-item active" onclick="switchTab(this, 'Home')">
             <span>🏠</span>
             <span>Home</span>
         </a>
-        <a class="nav-item">
+        <a class="nav-item" onclick="switchTab(this, 'Plans')">
             <span>📈</span>
             <span>Plans</span>
         </a>
-        <a class="nav-item">
+        <a class="nav-item" onclick="switchTab(this, 'Wallet')">
             <span>👛</span>
             <span>Wallet</span>
         </a>
-        <a class="nav-item">
+        <a class="nav-item" onclick="switchTab(this, 'Team')">
             <span>👥</span>
             <span>Team</span>
         </a>
-        <a class="nav-item">
+        <a class="nav-item" onclick="switchTab(this, 'Profile')">
             <span>👤</span>
             <span>Profile</span>
         </a>
     </div>
 
+    <script>
+        // Button Functionalities
+        function handleAlert(actionName) {
+            alert(actionName + " clicked!");
+        }
+
+        function handleDeposit() {
+            let amount = prompt("Enter deposit amount (Rs):", "500");
+            if (amount && !isNaN(amount)) {
+                document.getElementById('total-balance').innerText = "Rs. " + amount;
+                document.getElementById('overview-deposits').innerText = amount + " Rs";
+                alert("Deposit request of Rs. " + amount + " submitted successfully!");
+            }
+        }
+
+        function handleWithdraw() {
+            let amount = prompt("Enter withdrawal amount (Rs):", "100");
+            if (amount && !isNaN(amount)) {
+                alert("Withdrawal request of Rs. " + amount + " submitted!");
+            }
+        }
+
+        function handleQuickAction(actionName) {
+            alert("Opening " + actionName);
+        }
+
+        function copyReferralLink() {
+            let linkText = document.getElementById('ref-link').innerText;
+            navigator.clipboard.writeText(linkText).then(() => {
+                alert("Referral link copied to clipboard!");
+            });
+        }
+
+        function playGame(gameName) {
+            alert("Starting " + gameName + "! Good luck!");
+            document.getElementById('plan-status-badge').innerText = "Active";
+            document.getElementById('plan-investment').innerText = "320 Rs";
+            document.getElementById('plan-profit').innerText = "70 Rs";
+            document.getElementById('progress-fill').style.width = "22%";
+            document.getElementById('progress-text').innerText = "22%";
+            document.getElementById('profit-badge').innerText = "📊 +140 Rs total profit";
+        }
+
+        function switchTab(element, tabName) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+            console.log("Switched to tab: " + tabName);
+        }
+    </script>
 </body>
-          </html>
-          
+</html>
