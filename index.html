@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Tijarat - Black & Red Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 90px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .logo-area span {
+            color: #ff1a1a;
+        }
+
+        .top-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Welcome Section */
+        .welcome-section h1 {
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .welcome-section h1 span {
+            color: #ff1a1a;
+        }
+
+        .welcome-section p {
+            font-size: 14px;
+            color: #888888;
+        }
+
+        /* Total Balance Card */
+        .balance-card {
+            background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(255, 0, 0, 0.15);
+        }
+
+        .balance-title {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+
+        .balance-amount {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 8px 0;
+            color: #ffffff;
+        }
+
+        .profit-badge {
+            background: rgba(255, 0, 0, 0.15);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #ff4d4d;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .balance-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 12px;
+            border-radius: 14px;
+            color: #ffffff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .action-btn.primary {
+            background: #ff1a1a;
+            border-color: #ff1a1a;
+            color: #ffffff;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .section-header h2 {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .section-header span {
+            font-size: 12px;
+            color: #777777;
+        }
+
+        /* Quick Actions Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px 10px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .grid-item div {
+            font-size: 12px;
+            color: #cccccc;
+        }
+
+        .icon-circle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff1a1a;
+        }
+
+        /* Invite Banner */
+        .invite-banner {
+            background: linear-gradient(135deg, #141414 0%, #1f0505 100%);
+            border: 1px solid rgba(255, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .invite-banner h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .invite-banner p {
+            font-size: 12px;
+            color: #888888;
+            margin-bottom: 12px;
+        }
+
+        .link-box {
+            background: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            color: #aaaaaa;
+            margin-bottom: 12px;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: #ff1a1a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: auto;
+        }
+
+        /* Account Overview */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .overview-card {
+            background: #141414;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 14px 10px;
+            border-radius: 16px;
+        }
+
+        .overview-card .label {
+            font-size: 11px;
+            color: #888888;
+            margin-bottom: 6px;
+        }
+
+        .overview-card .value {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ff4d4d;
+        }
+
+        /* Scratch & Win / Lucky Spinner Cards */
+        .game-card {
+            background: linear-gradient(135deg, #1f0505 0%, #141414 100%);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .game-info h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .game-info p {
+            font-size: 12px;
+            color: #888888;
+            margin-bottom: 12px;
+        }
+
+        .play-btn {
+            background: #ff1a1a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        /* Active Plan Card */
+        .plan-card {
+            background: linear-gradient(135deg, #1a0000 0%, #0d0d0d 100%);
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .plan-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .plan-title-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plan-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 0, 0, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff1a1a;
+        }
+
+        .plan-name h4 {
+            font-size: 16px;
+        }
+
+        .plan-status {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff1a1a;
+            color: #ff4d4d;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .plan-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .plan-stat .stat-label {
+            font-size: 11px;
+            color: #888888;
+        }
+
+        .plan-stat .stat-val {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        .progress-bar-bg {
+            background: #000000;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+
+        .progress-bar-fill {
+            background: #ff1a1a;
+            width: 22%;
+            height: 100%;
+        }
+
+        .progress-text {
+            text-align: right;
+            font-size: 11px;
+            color: #888888;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: #111111;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: #777777;
+            font-size: 11px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo-area">
+                🛒 Walmart <span>Tijarat</span>
+            </div>
+            <div class="top-icons">
+                <div class="icon-btn">🔔</div>
+                <div class="icon-btn">⋮</div>
+                <div class="icon-btn">👤</div>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1>Welcome Back, <span>umer.jump</span></h1>
+            <p>Keep investing, keep growing!</p>
+        </div>
+
+        <!-- Total Balance Card -->
+        <div class="balance-card">
+            <div class="balance-title">Total Balance</div>
+            <div class="balance-amount">Rs. 36</div>
+            <div class="profit-badge">📊 +140 Rs total profit</div>
+            <div class="balance-actions">
+                <div class="action-btn primary">➕ Deposit</div>
+                <div class="action-btn">➖ Withdraw</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="section-header">
+            <h2>Quick Actions</h2>
+            <span>Manage Your Investments</span>
+        </div>
+        <div class="grid-3">
+            <div class="grid-item">
+                <div class="icon-circle">🛒</div>
+                <div>Buy Plan</div>
+            </div>
+            <div class="grid-item">
+                <div class="icon-circle">📊</div>
+                <div>Active Plans</div>
+            </div>
+            <div class="grid-item">
+                <div class="icon-circle">📋</div>
+                <div>Deposit History</div>
+            </div>
+            <div class="grid-item">
+                <div class="icon-circle">💳</div>
+                <div>Withdraw History</div>
+            </div>
+            <div class="grid-item">
+                <div class="icon-circle">👥</div>
+                <div>My Team</div>
+            </div>
+            <div class="grid-item">
+                <div class="icon-circle">🎁</div>
+                <div>Referral Income</div>
+            </div>
+        </div>
+
+        <!-- Invite Friends -->
+        <div class="invite-banner">
+            <h3>Invite Friends & Earn Rewards</h3>
+            <p>Grow Together, Earn Together</p>
+            <div class="link-box">https://walmart-tijarat.com/signup?ref=umer.jump</div>
+            <button class="copy-btn">📋 Copy Link</button>
+        </div>
+
+        <!-- Account Overview -->
+        <div class="section-header">
+            <h2>Account Overview</h2>
+            <span>Your Financial Summary</span>
+        </div>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="label">Total Deposits</div>
+                <div class="value">640 Rs</div>
+            </div>
+            <div class="overview-card">
+                <div class="label">Total Withdraw</div>
+                <div class="value">150 Rs</div>
+            </div>
+            <div class="overview-card">
+                <div class="label">Pending Deposits</div>
+                <div class="value">0 Rs</div>
+            </div>
+        </div>
+
+        <!-- Scratch & Win -->
+        <div class="game-card">
+            <div class="game-info">
+                <h3>Scratch & Win</h3>
+                <p>1 Chance Daily</p>
+                <button class="play-btn">Play Now</button>
+            </div>
+            <div style="font-size: 32px;">🎁</div>
+        </div>
+
+        <!-- Active Plan -->
+        <div class="section-header">
+            <h2>Active Plan</h2>
+            <span>Your Current Investment</span>
+        </div>
+        <div class="plan-card">
+            <div class="plan-header">
+                <div class="plan-title-area">
+                    <div class="plan-icon">📈</div>
+                    <div class="plan-name">
+                        <h4>Package 1</h4>
+                    </div>
+                </div>
+                <div class="plan-status">Active</div>
+            </div>
+            <div class="plan-details">
+                <div class="plan-stat">
+                    <div class="stat-label">INVESTMENT</div>
+                    <div class="stat-val">320 Rs</div>
+                </div>
+                <div class="plan-stat">
+                    <div class="stat-label">DAILY PROFIT</div>
+                    <div class="stat-val">70 Rs</div>
+                </div>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <div class="progress-text">22%</div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <a class="nav-item active">
+            <span>🏠</span>
+            <span>Home</span>
+        </a>
+        <a class="nav-item">
+            <span>📈</span>
+            <span>Plans</span>
+        </a>
+        <a class="nav-item">
+            <span>👛</span>
+            <span>Wallet</span>
+        </a>
+        <a class="nav-item">
+            <span>👥</span>
+            <span>Team</span>
+        </a>
+        <a class="nav-item">
+            <span>👤</span>
+            <span>Profile</span>
+        </a>
+    </div>
+
+</body>
+          </html>
+          
